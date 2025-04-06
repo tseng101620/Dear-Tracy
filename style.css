@@ -13,6 +13,10 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  scroll-snap-type: y mandatory;
+}
+
 section {
   height: 100vh;
   width: 100vw;
@@ -23,21 +27,12 @@ section {
   justify-content: center;
 }
 
-body {
-  scroll-snap-type: y mandatory;
-}
-
-.intro {
-  background: black;
-  animation: fadein 2s ease;
-}
-
-.intro .text {
+.intro .text, .quote p, .outro p {
   text-align: center;
   font-size: 1.5rem;
   line-height: 2.4rem;
   max-width: 90%;
-  color: white;
+  animation: fadein 2s ease;
 }
 
 .photo img {
@@ -49,4 +44,30 @@ body {
 @keyframes fadein {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  font-size: 1rem;
+  color: white;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  z-index: 999;
+}
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 1.2rem;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0.6;
 }

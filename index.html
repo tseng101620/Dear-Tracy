@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="logo">Our memory</div>
+  <audio id="bgm" loop>
+    <source src="bgm.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" onclick="toggleMusic()">♫</button>
   <section class="intro">
     <div class="text">
       <p>這一年裡我靜靜的整理了關於我們的回憶，<br>
@@ -34,6 +39,8 @@
   <section class="photo"><img src="photos/photo17.jpg" alt="photo17"></section>
   <section class="photo"><img src="photos/photo18.jpg" alt="photo18"></section>
   <section class="photo"><img src="photos/photo19.jpg" alt="photo19"></section>
+
+  <section class="quote"><p>春天時你說，風很溫柔，像我。</p></section>
   <section class="photo"><img src="photos/photo20.jpg" alt="photo20"></section>
   <section class="photo"><img src="photos/photo21.jpg" alt="photo21"></section>
   <section class="photo"><img src="photos/photo22.jpg" alt="photo22"></section>
@@ -54,6 +61,8 @@
   <section class="photo"><img src="photos/photo37.jpg" alt="photo37"></section>
   <section class="photo"><img src="photos/photo38.jpg" alt="photo38"></section>
   <section class="photo"><img src="photos/photo39.jpg" alt="photo39"></section>
+
+  <section class="quote"><p>那天日落的光灑在你臉上，我想，我好喜歡你。</p></section>
   <section class="photo"><img src="photos/photo40.jpg" alt="photo40"></section>
   <section class="photo"><img src="photos/photo41.jpg" alt="photo41"></section>
   <section class="photo"><img src="photos/photo42.jpg" alt="photo42"></section>
@@ -74,6 +83,8 @@
   <section class="photo"><img src="photos/photo57.jpg" alt="photo57"></section>
   <section class="photo"><img src="photos/photo58.jpg" alt="photo58"></section>
   <section class="photo"><img src="photos/photo59.jpg" alt="photo59"></section>
+
+  <section class="quote"><p>時間走得很快，但我記得很慢。</p></section>
   <section class="photo"><img src="photos/photo60.jpg" alt="photo60"></section>
   <section class="photo"><img src="photos/photo61.jpg" alt="photo61"></section>
   <section class="photo"><img src="photos/photo62.jpg" alt="photo62"></section>
@@ -118,5 +129,20 @@
   <section class="photo"><img src="photos/photo101.jpg" alt="photo101"></section>
   <section class="photo"><img src="photos/photo102.jpg" alt="photo102"></section>
   <section class="photo"><img src="photos/photo103.jpg" alt="photo103"></section>
+  <section class="photo"><img src="photos/photo104.jpg" alt="photo104"></section>
+  <section class="photo"><img src="photos/photo105.jpg" alt="photo105"></section>
+
+  <section class="outro"><p>謝謝你出現在我生命裡一整年。<br>我把它靜靜收藏起來了。</p></section>
+
+<script>
+function toggleMusic() {
+  const audio = document.getElementById("bgm");
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
 </body>
 </html>
