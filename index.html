@@ -12,13 +12,16 @@
     <source src="bgm.mp3" type="audio/mpeg">
   </audio>
   <button class="music-btn" onclick="toggleMusic()">♫</button>
+
   <section class="intro">
     <div class="text">
-      <p>我靜靜的整理了這一年裡關於我們的回憶，<br>
+      <p>這一年裡我靜靜的整理了關於我們的回憶，<br>
       只想和你說，我覺得很幸運也很開心，<br>
       很珍惜我們曾有過的感情！<br>
       希望你一切安好。</p>
     </div>
+  </section>
+
   </section>
   <section class="photo"><img src="photos/photo1.jpg" alt="photo1"></section>
   <section class="photo"><img src="photos/photo2.jpg" alt="photo2"></section>
@@ -214,16 +217,28 @@
   <section class="outro"><p>"For you, always — softly, quietly, but sincerely."<br><br>
 							Yi-Fan<br>
   </p></section>
-  
-<script>
-function toggleMusic() {
-  const audio = document.getElementById("bgm");
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-}
-</script>
+
+  <script>
+    function toggleMusic() {
+      const audio = document.getElementById("bgm");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    let musicStarted = false;
+    function startMusicOnInteraction() {
+      if (!musicStarted) {
+        document.getElementById("bgm").play();
+        musicStarted = true;
+      }
+    }
+
+    window.addEventListener('scroll', startMusicOnInteraction);
+    window.addEventListener('click', startMusicOnInteraction);
+    window.addEventListener('touchstart', startMusicOnInteraction);
+  </script>
 </body>
 </html>
