@@ -79,3 +79,16 @@ section {
   white-space: pre-line;
   word-break: break-word;
 }
+
+.subtle-note {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0.6;
+  line-height: 1.5rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
